@@ -1,7 +1,20 @@
 exports.run = async function (bot, message) {
-  var DiceFace = ["<:diceface1:330090887273119745>", "<:diceface2:330091146027991041>", "<:diceface3:330091339825807363>", "<:diceface4:330091474295455774>", "<:diceface5:330091570000822284>", "<:diceface6:330091695674753025>"]
+  var DiceFace = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:"]
   var rand = DiceFace[Math.floor(Math.random() * DiceFace.length)]
-  message.reply("You Rolled: " + rand)
+  message.reply("You Rolled: :one: (Please Wait... Generating Number..)").then(() => {
+      bot.user.lastMessage.edit(`${message.author}, You Rolled: :two: (Please Wait... Generating Number..)`).then(() => {
+        bot.user.lastMessage.edit(`${message.author}, You Rolled: :three: (Please Wait... Generating Number..)`).then(() => {
+          bot.user.lastMessage.edit(`${message.author}, You Rolled: :four: (Please Wait... Generating Number..)`).then(() => {
+            bot.user.lastMessage.edit(`${message.author}, You Rolled: :five: (Please Wait... Generating Number..)`).then(() =>{
+              bot.user.lastMessage.edit(`${message.author}, You Rolled: :six: (Please Wait... Generating Number..)`).then(() => {
+                bot.user.lastMessage.edit(`${message.author}, You Rolled: ${rand}`)
+    
+                                  })
+                                })
+                              })
+                            })
+                          })
+                        })
 }
 
 exports.help = {

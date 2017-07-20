@@ -245,9 +245,7 @@ bot.on('message', msg => {
 
 
 bot.on("guildMemberAdd", (member) => {
-  member.send(`Welcome To ${member.guild}'s Server Please Read Over The Guidelines And Have A Nice Time! Once You Have Read Over The Guidelines Type "${config.prefix}agree" In <#${member.guild.channels.find("name", "guests").id}>, if you do not see a channel called #guests, that means that Anti-Raid Is Disabled. In That Case Do Not Worry About ${config.prefix}agree`)
-  member.addRole(member.guild.roles.find("name", "Member"))
-  member.guild.channels.find("name", config.MainChat).send(`${member} Thank you for choosing ${member.guild}! Hope you have a good time! And if you havent already, please read over our rules in <#${member.guild.channels.find("name", "guidelines").id}>`)
+  member.send(`Welcome To ${member.guild}'s Server Please Read Over The Guidelines And Have A Nice Time!`)
     function getkicks(){
         let userid = member.id
       if(!userid) {
