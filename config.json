@@ -1,0 +1,6 @@
+{
+"token" : "Your Bot Token Here",
+"no_perms" : "```Sorry, but it seems that you do not have the right permissions to execute this command.```",
+"MainChat" : "Your Main Chat Here",
+"Log_Channel" : "Your Log Channel Here",
+}
